@@ -1,0 +1,137 @@
+@font-face {
+    font-family: jedi;
+    src: url(../font/Jedi.ttf)
+  }
+
+  @font-face {
+    font-family: hollow;
+    src: url(../font/Starjhol.ttf)
+  }
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: jedi;
+    font-size: 17px;
+    color:rgb(240, 216, 81);
+  }
+  
+  #backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    opacity: .9;
+    z-index: -1;
+  }
+
+  .header{
+      background-image: url("../images/background-black6.png");
+      margin-bottom: 30px;
+  }
+
+  .gamecontent{
+    background-image: url("../images/background-black6.png"); 
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.choose{
+  margin-bottom:10px;
+}
+
+/* .choosechar{
+  font-family: hollow;
+  color: rgb(240, 216, 81);
+} */
+
+.name{
+  font-family: hollow;
+  color: rgb(240, 216, 81);
+  font-size:1.05rem;
+}
+
+a:hover{
+  text-decoration: none;
+  
+}
+
+.HP{
+  font-family: jedi;
+}
+
+.btn-outline-warning{
+  border-color: rgb(240, 216, 81);
+  color: rgb(240, 216, 81);
+}
+
+.btn-outline-warning:hover {
+  color: #212529;
+  background-color: rgb(240, 216, 81);
+  border-color:  rgb(240, 216, 81);
+}
+
+#characterLine{
+  display:none;
+}
+
+#oppoLine{
+  display:none;
+}
+
+#vs{
+  padding-top: 80px;
+  font-size: 70px;
+  text-align: center;
+  display:none;
+}
+
+#gamePLay{
+  padding-top:20px;
+}
+
+#characterPic1{
+  display:none;
+}
+
+#characterPic2{
+  display:none;
+}
+
+#characterPic3{
+  display:none;
+}
+
+#characterPic4{
+  display:none;
+}
+
+#OppoPic1{
+  display:none;
+}
+
+#OppoPic2{
+  display:none;
+}
+
+#OppoPic3{
+  display:none;
+}
+
+#OppoPic4{
+  display:none;
+}
+
+#reset{
+  display:none;
+}
+
+
+
+  
