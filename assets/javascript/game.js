@@ -1,21 +1,24 @@
 //character stats
 var lukeSkywalker = {
+    name: 'luke skywalker',
     hp: 0,
     attack: 0,
-    //attackInit: attack,
     counterAttack: 0,
 }
 var darthVader = {
+    name: 'darth vader',
     hp: 0,
     attack: 0,
     counterAttack: 0,
 }
 var stormTrooper = {
+    name: 'storm trooper',
     hp: 0,
     attack: 0,
     counterAttack: 0,
 }
 var yoda = {
+    name: 'yoda',
     hp: 0,
     attack: 0,
     counterAttack: 0,
@@ -27,10 +30,12 @@ var oppoChose = false;
 var character;
 var opponent;
 
-var initAttack; //keep going from here - - make initAttack = attack in the part where you choose the character
+var initAttack; // stores initial attack power to add to the power of character
+
+var opponentsDefeated=0;
 
 function Start(){
-    lukeSkywalker.hp = Math.floor(Math.random() * 100 + 100); //choose initial HP for each character
+    lukeSkywalker.hp = Math.floor(Math.random() * 100 + 100); //random initial HP for each character
     darthVader.hp = Math.floor(Math.random() * 100 + 100);
     stormTrooper.hp = Math.floor(Math.random() * 100 + 100);
     yoda.hp = Math.floor(Math.random() * 100 + 100);
@@ -40,12 +45,12 @@ function Start(){
     $(".hp3").text(stormTrooper.hp);
     $(".hp4").text(yoda.hp);
 
-    lukeSkywalker.attack = Math.floor(Math.random() * 6 + 5); //choose attack power for each character
+    lukeSkywalker.attack = Math.floor(Math.random() * 6 + 5); //random attack power for each character
     darthVader.attack = Math.floor(Math.random() * 6 + 5);
     stormTrooper.attack = Math.floor(Math.random() * 6 + 5);
     yoda.attack = Math.floor(Math.random() * 6 + 5);
 
-    lukeSkywalker.counterAttack = Math.floor(Math.random() * 16 + 10); //choose counter attack power for each character
+    lukeSkywalker.counterAttack = Math.floor(Math.random() * 16 + 10); //random counter attack power for each character
     darthVader.counterAttack = Math.floor(Math.random() * 16 + 10);
     stormTrooper.counterAttack = Math.floor(Math.random() * 16 + 10);
     yoda.counterAttack = Math.floor(Math.random() * 16 + 10);
@@ -66,8 +71,8 @@ function Start(){
 
 Start()
 
-$("#gamepic1").on("click", function(){
-    if(!playerChosen){
+$("#gamepic1").on("click", function(){ // click function when choosing characters
+    if(!playerChosen){  //if no player chosen
 
         $("#gamepic1").css("display","none");
         $("#characterPic1").css("display","inline-block");
@@ -77,20 +82,25 @@ $("#gamepic1").on("click", function(){
         character=lukeSkywalker;
         initAttack = lukeSkywalker.attack;
         console.log(playerChosen)
+        console.log(lukeSkywalker)
         console.log(character)
         console.log("character hp:"+character.hp)
         console.log("character attack:"+character.attack)
         console.log("character counter attack:"+character.counterAttack)
         console.log("This is the initial attack power:"+initAttack)
     }
-    else if(!oppoChose){
+    else if(!oppoChose){ //if player chosen but no opponent
         $("#gamepic1").css("display","none");
         $("#OppoPic1").css("display","inline-block");
         $("#vs").css("display","inline-block");
         $("#oppoLine").css("display","inline-block");
+        $("#gamePLay").empty();
 
         oppoChose=true;
         opponent=lukeSkywalker;
+
+        $(".hpo").text(opponent.hp);
+
         console.log(oppoChose)
         console.log(opponent)
     }
@@ -110,7 +120,11 @@ $("#gamepic2").on("click", function(){
         character=darthVader;
         initAttack = darthVader.attack;
         console.log(playerChosen)
+        console.log(darthVader)
         console.log(character)
+        console.log("character hp:"+character.hp)
+        console.log("character attack:"+character.attack)
+        console.log("character counter attack:"+character.counterAttack)
         console.log("This is the initial attack power:"+initAttack)
     }
     else if(!oppoChose){
@@ -118,9 +132,13 @@ $("#gamepic2").on("click", function(){
         $("#OppoPic2").css("display","inline-block");
         $("#vs").css("display","inline-block");
         $("#oppoLine").css("display","inline-block");
+        $("#gamePLay").empty();
 
         oppoChose=true;
         opponent=darthVader;
+
+        $(".hpo").text(opponent.hp);
+
         console.log(oppoChose)
         console.log(opponent)
     }
@@ -140,6 +158,7 @@ $("#gamepic3").on("click", function(){
         character=stormTrooper;
         initAttack = stormTrooper.attack;
         console.log(playerChosen)
+        console.log(stormTrooper)
         console.log(character)
         console.log("This is the initial attack power:"+initAttack)
     }
@@ -148,9 +167,13 @@ $("#gamepic3").on("click", function(){
         $("#OppoPic3").css("display","inline-block");
         $("#vs").css("display","inline-block");
         $("#oppoLine").css("display","inline-block");
+        $("#gamePLay").empty();
 
         oppoChose=true;
         opponent=stormTrooper;
+
+        $(".hpo").text(opponent.hp);
+
         console.log(oppoChose)
         console.log(opponent)
     }
@@ -170,6 +193,7 @@ $("#gamepic4").on("click", function(){
         character=yoda;
         initAttack = yoda.attack;
         console.log(playerChosen)
+        console.log(yoda)
         console.log(character)
         console.log("This is the initial attack power:"+initAttack)
     }
@@ -178,9 +202,13 @@ $("#gamepic4").on("click", function(){
         $("#OppoPic4").css("display","inline-block");
         $("#vs").css("display","inline-block");
         $("#oppoLine").css("display","inline-block");
+        $("#gamePLay").empty();
 
         oppoChose=true;
         opponent=yoda;
+
+        $(".hpo").text(opponent.hp);
+
         console.log(oppoChose)
         console.log(opponent)
     }
@@ -189,57 +217,48 @@ $("#gamepic4").on("click", function(){
     }
 });
 
-$("#attack").on("click", function(){  //**/need an if opponent=false then return none
-    character.hp=character.hp - opponent.counterAttack; //character hp after attack
-    opponent.hp=opponent.hp - character.attack; // opponent hp after attack
-    character.attack=character.attack + initAttack; // increases the attack power by the initial amount after every attack
+$("#attack").on("click", function(){  
+    if(oppoChose){
+        $("#gamePLay").text("You attacked "+opponent.name+" with "+character.attack+"x power. He attacked back with "+opponent.counterAttack+"x power. ") // display yours and opponnet attack power on screen
+        character.hp=character.hp - opponent.counterAttack; //character hp after attack
+        opponent.hp=opponent.hp - character.attack; // opponent hp after attack
+        character.attack=character.attack + initAttack; // increases the attack power by the initial amount after every attack
 
-    $(".hp1").text(lukeSkywalker.hp); //display HP in html
-    $(".hp2").text(darthVader.hp);
-    $(".hp3").text(stormTrooper.hp);
-    $(".hp4").text(yoda.hp);
+        $(".hpc").text(character.hp);
+        $(".hpo").text(opponent.hp);
+        $("#gamePLay").append("your remaning hp is "+character.hp) //checking that character.hp is same as *.hp for chosen fighter
 
-    gamePlay()
+        if(character.hp<=0){
+            lose()
+        }
 
-    if(character.hp<=0){
-        lose()
+        else if(opponent.hp<=0){
+            winRound()
+        }
+
+        console.log("Character hp:"+character.hp)
+        console.log("Opponent hp:"+opponent.hp)
+        console.log("Attack power:"+character.attack) 
     }
-
-    else if(opponent.hp<=0){
-        winRound()
+    else{
+        return none
     }
+});
 
-    else if(((lukeSkywalker.hp<=0)&&(darthVader.hp<=0)&&(stormTrooper.hp<=0)&&(character=yoda))||((character=lukeSkywalker)&&(darthVader.hp<=0)&&(stormTrooper.hp<=0)&&(yoda.hp<=0))||((lukeSkywalker.hp<=0)&&(character=darthVader)&&(stormTrooper.hp<=0)&&(yoda.hp<=0))||((lukeSkywalker.hp<=0)&&(darthVader.hp<=0)&&(character=stormTrooper)&&(yoda.hp<=0))){
+function winRound(){    //check if 3 wins here and set up for new opponent
+    opponentsDefeated++;
+
+    if(opponentsDefeated===3){
         winGame()
     }
 
-    console.log("Character hp:"+character.hp)
-    console.log("Opponent hp:"+opponent.hp)
-    console.log("Attack power:"+character.attack)
-});
+    else{
+        oppoChose=false;
+        $("#gamePLay").text("you win this round, choose a new opponent");
+        $("#OppoPic1, #OppoPic2, #OppoPic3, #OppoPic4").css("display","none");
 
-function gamePlay(){
-    /* if(opponent=lukeSkywalker){
-        opponent="luke skywalker"
+        console.log("#Opponents defeated:"+opponentsDefeated)
     }
-    else if(opponent=darthVader){
-        opponent="darth vader"
-    }
-    else if(opponent=stormTrooper){
-        opponent="storm trooper"
-    }
-    else if(opponent=yoda){
-        opponent="yoda"
-    } 
-    $("#gamePLay").text("You attacked "+opponent+" with "+character.attack+"x power") */
-    $("#gamePLay").text("You attacked your opponent with "+character.attack+"x power. He attacked back with "+opponent.counterAttack+"x power")
-    
-}
-
-function winRound(){
-    oppoChose=false;
-    $("#gamePLay").text("you win this round, choose a new opponent");
-    $("#OppoPic1, #OppoPic2, #OppoPic3, #OppoPic4").css("display","none");
 }
 
 function lose(){
@@ -259,7 +278,7 @@ function Reset(){
 
     $("#gamepic1, #gamepic2, #gamepic3, #gamepic4").css("display","inline-block");
     
-    $("#characterPic1, #characterPic2, #characterPic4, #characterPic4").css("display","none");
+    $("#characterPic1, #characterPic2, #characterPic3, #characterPic4").css("display","none");
 
     $("#OppoPic1, #OppoPic2, #OppoPic3, #OppoPic4").css("display","none");
 
@@ -268,11 +287,14 @@ function Reset(){
     $("#gamePLay").empty();
 
     $("#attack").css("display","inline-block");
-    
+
+    opponentsDefeated=0;
     playerChosen = false;
     oppoChose = false;
 
     Start()
+
+    console.log("#Opponents defeated:"+opponentsDefeated)
 }
 
 $("#reset").on("click", function(){
