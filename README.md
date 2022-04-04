@@ -1,6 +1,6 @@
 # Star Wars RPG
 
-Link to game: https://gsavr.github.io/unit-4-game/
+Link to game: https://gsavr.github.io/unit-4-game-sw/
 
 Objective: 
 -When the game starts, the player will choose a character by clicking on the picture. The player will fight as that character for the rest of the game.
