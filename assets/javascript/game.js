@@ -217,6 +217,10 @@ $("#gamepic4").on("click", function(){
     }
 });
 
+if(!oppoChose){
+    $("#attack").css("display","none");
+};
+
 $("#attack").on("click", function(){  
     if(oppoChose){
         $("#gamePLay").text("You attacked "+opponent.name+" with "+character.attack+"x power. He attacked back with "+opponent.counterAttack+"x power. ") // display yours and opponnet attack power on screen
