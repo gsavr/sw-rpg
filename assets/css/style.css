@@ -14,7 +14,7 @@
   
   body {
     margin: 0;
-    font-family: jedi;
+    font-family: jedi, helvetica, arial, sans-serif;
     font-size: 17px;
     color:rgb(240, 216, 81);
   }
@@ -63,7 +63,7 @@ a:hover{
 }
 
 .HP{
-  font-family: jedi;
+  font-family: jedi, helvetica, arial, sans-serif;
 }
 
 .btn-outline-warning{
