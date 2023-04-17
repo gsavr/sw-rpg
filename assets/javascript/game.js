@@ -258,6 +258,7 @@ function winRound() {
     winGame();
   } else {
     oppoChose = false;
+    $("#attack").css("display", "none");
     $("#gamePLay").text("you win this round, choose a new opponent");
     $("#OppoPic1, #OppoPic2, #OppoPic3, #OppoPic4").css("display", "none");
 
