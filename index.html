@@ -1,111 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <title>Star Wars RPG</title>
-</head>
-<body>
-    <div class="container header">
-        
-                <h3 class="display-4 text-center" id="game-title">Star Wars RPG</h3>
-           
-    </div>
-    
-    <div class="container gamecontent">
+  </head>
+  <body>
+    <div class="app">
+      <div class="container header">
+        <h3 class="display-4 text-center" id="game-title">Star Wars RPG</h3>
+      </div>
+
+      <div class="container gamecontent">
         <div class="row">
-            <div class="col-md-12 choose">
-                Choose your character and opponent:
-            </div>
+          <div class="col-md-12 choose">
+            Choose your character and opponent:
+          </div>
         </div>
         <div class="row choosechar">
-                <div id="gamepic1"class="col-sm-3">
-                    <span class="name">Luke Skywalker</span><img class="img-fluid gamepic" src="assets/images/player1.jpg" alt="Luke Skywalker"><span class="HP">HP:</span><span class="hp1 HP">HP:0</span>
-                </div>
-                <div id="gamepic2" class="col-sm-3">
-                    <span class="name">Darth vader</span><img class="img-fluid gamepic" src="assets/images/player2.jpg" alt="Darth vader"><span class="HP">HP:</span><span class="hp2 HP">HP:0</span>
-                </div>
-                <div id="gamepic3" class="col-sm-3">
-                    <span class="name">Storm Trooper</span><img class="img-fluid gamepic" src="assets/images/player3.jpg" alt="Storm Trooper"><span class="HP">HP:</span><span class="hp3 HP">HP:0</span>
-                </div>
-                <div id="gamepic4" class="col-sm-3">
-                    <span class="name">Yoda</span><img  class="img-fluid gamepic" src="assets/images/player4.jpg" alt="Yoda"><span class="HP">HP:</span><span class="hp4 HP">HP:0</span>
-                </div>
+          <div id="gamepic1" class="col-sm-3">
+            <span class="name">Luke Skywalker</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player1.jpg"
+              alt="Luke Skywalker"
+            /><span class="HP">HP:</span><span class="hp1 HP">HP:0</span>
+          </div>
+          <div id="gamepic2" class="col-sm-3">
+            <span class="name">Darth vader</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player2.jpg"
+              alt="Darth vader"
+            /><span class="HP">HP:</span><span class="hp2 HP">HP:0</span>
+          </div>
+          <div id="gamepic3" class="col-sm-3">
+            <span class="name">Storm Trooper</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player3.jpg"
+              alt="Storm Trooper"
+            /><span class="HP">HP:</span><span class="hp3 HP">HP:0</span>
+          </div>
+          <div id="gamepic4" class="col-sm-3">
+            <span class="name">Yoda</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player4.jpg"
+              alt="Yoda"
+            /><span class="HP">HP:</span><span class="hp4 HP">HP:0</span>
+          </div>
         </div>
         <div class="row">
-            <div id="characterLine" class="col-md-5">
-                Your character
-            </div>
-            <div id="oppoLine"class="col-md-6">
-                opponent
-            </div>
+          <div id="characterLine" class="col-md-5">Your character</div>
+          <div id="oppoLine" class="col-md-6">opponent</div>
         </div>
         <div class="row character">
-            <!-- character pics -->
-                <div id="characterPic1" class="col-sm-3">
-                    <span class="name">Luke Skywalker</span><img class="img-fluid gamepic" src="assets/images/player1.jpg" alt="Luke Skywalker">HP:<span class="hp1 hpc lead">HP1</span>
-                </div>
-                <div id="characterPic2" class="col-sm-3">
-                    <span class="name">Darth vader</span><img class="img-fluid gamepic" src="assets/images/player2.jpg" alt="Darth vader">HP:<span class="hp2 hpc lead">HP2</span>
-                </div>
-                <div id="characterPic3" class="col-sm-3">
-                    <span class="name">Storm Trooper</span><img class="img-fluid gamepic" src="assets/images/player3.jpg" alt="Storm Trooper">HP:<span class="hp3 hpc lead">HP3</span>
-                </div>
-                <div id="characterPic4" class="col-sm-3">
-                    <span class="name">Yoda</span><img  class="img-fluid gamepic" src="assets/images/player4.jpg" alt="Yoda">HP:<span class="hp4 hpc lead">HP4</span>
-                </div>
-                <!-- VS -->
-                <div id="vs" class="col-sm-2">
-                    vs
-                </div>
-        <!-- opponent pics -->
-                <div id="OppoPic1" class="col-sm-3">
-                    <span class="name">Luke Skywalker</span><img class="img-fluid gamepic" src="assets/images/player1.jpg" alt="Luke Skywalker">HP:<span class="hp1 hpo lead">HP1</span>
-                </div>
-                <div id="OppoPic2" class="col-sm-3">
-                    <span class="name">Darth vader</span><img class="img-fluid gamepic" src="assets/images/player2.jpg" alt="Darth vader">HP:<span class="hp2 hpo lead">HP2</span>
-                </div>
-                <div id="OppoPic3" class="col-sm-3">
-                    <span class="name">Storm Trooper</span><img class="img-fluid gamepic" src="assets/images/player3.jpg" alt="Storm Trooper">HP:<span class="hp3 hpo lead">HP3</span>
-                </div>
-                <div id="OppoPic4" class="col-sm-3">
-                    <span class="name">Yoda</span><img class="img-fluid gamepic" src="assets/images/player4.jpg" alt="Yoda">HP:<span class="hp4 hpo lead">HP4</span>
-                </div>
-                <div id="gamePLay" class="col-sm-3">
-                    <!-- This is where the attack outcome is shown -->
-                </div>
+          <!-- character pics -->
+          <div id="characterPic1" class="col-sm-3">
+            <span class="name">Luke Skywalker</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player1.jpg"
+              alt="Luke Skywalker"
+            />HP:<span class="hp1 hpc lead">HP1</span>
+          </div>
+          <div id="characterPic2" class="col-sm-3">
+            <span class="name">Darth vader</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player2.jpg"
+              alt="Darth vader"
+            />HP:<span class="hp2 hpc lead">HP2</span>
+          </div>
+          <div id="characterPic3" class="col-sm-3">
+            <span class="name">Storm Trooper</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player3.jpg"
+              alt="Storm Trooper"
+            />HP:<span class="hp3 hpc lead">HP3</span>
+          </div>
+          <div id="characterPic4" class="col-sm-3">
+            <span class="name">Yoda</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player4.jpg"
+              alt="Yoda"
+            />HP:<span class="hp4 hpc lead">HP4</span>
+          </div>
+          <!-- VS -->
+          <div id="vs" class="col-sm-2">vs</div>
+          <!-- opponent pics -->
+          <div id="OppoPic1" class="col-sm-3">
+            <span class="name">Luke Skywalker</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player1.jpg"
+              alt="Luke Skywalker"
+            />HP:<span class="hp1 hpo lead">HP1</span>
+          </div>
+          <div id="OppoPic2" class="col-sm-3">
+            <span class="name">Darth vader</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player2.jpg"
+              alt="Darth vader"
+            />HP:<span class="hp2 hpo lead">HP2</span>
+          </div>
+          <div id="OppoPic3" class="col-sm-3">
+            <span class="name">Storm Trooper</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player3.jpg"
+              alt="Storm Trooper"
+            />HP:<span class="hp3 hpo lead">HP3</span>
+          </div>
+          <div id="OppoPic4" class="col-sm-3">
+            <span class="name">Yoda</span
+            ><img
+              class="img-fluid gamepic"
+              src="assets/images/player4.jpg"
+              alt="Yoda"
+            />HP:<span class="hp4 hpo lead">HP4</span>
+          </div>
+          <div id="gamePLay" class="col-sm-3">
+            <!-- This is where the attack outcome is shown -->
+          </div>
         </div>
-                <div class="row Number">
-                    <div class="col-md-3">
-                        <Button type="button" id="attack" class="btn btn-outline-warning">Attack</Button> 
-                    </div> 
-                    <div class="col-md-3">
-                        <Button type="button" id="reset" class="btn btn-outline-warning">reset</Button> 
-                    </div>   
-                </div>
-            </div>
-            <div class="col-md-5">
-                
-            </div>
+        <div class="row Number">
+          <div class="col-md-3">
+            <button type="button" id="attack" class="btn btn-outline-warning">
+              Attack
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button type="button" id="reset" class="btn btn-outline-warning">
+              reset
+            </button>
+          </div>
         </div>
-    
+      </div>
+      <div class="col-md-5"></div>
     </div>
-    
 
-
-
+    <footer class="footer">
+      <div class="f-text">
+        <span class="text-muted">⚬ Giorgio Savron</span>
+      </div>
+      <div class="f-links">
+        <div>
+          <a
+            href="https://www.giorgiosavron.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="./assets/images/links/gs_logo.png"
+              alt="GS_logo"
+              class="f-icon"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/giorgio-savron/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="./assets/images/links/linkedin.png"
+              alt="Linkedin"
+              class="f-icon"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://github.com/gsavr/TriviaGame"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="./assets/images/links/github.png"
+              alt="github"
+              class="f-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <video autoplay muted loop id="backgroundVideo">
-        <source src="assets/video/back.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
+      <source src="assets/video/back.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
     </video>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-
-</body>
+  </body>
 </html>
